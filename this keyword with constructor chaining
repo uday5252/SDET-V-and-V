@@ -1,0 +1,89 @@
+//
+//
+//class Book
+//{
+//	String title;
+//	int price;
+//	
+////	Zero Parameterized Constructor
+//	Book(){
+//		this.title = "Java";
+//		this.price = 1000;
+//		
+//		System.out.println("Title is "+ title + 
+//				" and price is "+price);	
+//	}
+//	
+//	Book(String title)
+//	{
+//		this.title = title;
+//		this.price = 3000;
+//		System.out.println("Title is "+ title + 
+//				" and price is "+price);
+//		
+//	}
+//	
+//	Book(String title, int price)
+//	{
+//		this.title = title;
+//		this.price = price;
+//		System.out.println("Title is "+ title + 
+//				" and price is "+price);
+//	}
+//}
+//
+//public class Demo {
+//
+//	public static void main(String[] args) {
+//
+//		Book b1 = new Book();
+//		Book b2 = new Book("Python");
+//		Book b3 = new Book("Spring Boot", 5000);
+//		
+//	}
+//}
+
+
+
+
+
+
+class Book
+{
+	String title;
+	int price;
+	
+//	Zero Parameterized Constructor
+	Book(){
+		this("Java");
+	}
+	
+	Book(String title)// title = "Python"
+	{
+		this(title, 1000); //"Python", 1000
+	}
+	
+	Book(String title, int price)//title = "Java", price = 1000
+	{
+		this.title = title;
+		this.price = price;
+		
+		System.out.println("Title is "+ title + 
+				" and price is "+price);	
+	}
+}
+
+public class Demo {
+
+	public static void main(String[] args) {
+
+		Book b1 = new Book();
+		
+		
+		Book b2 = new Book("Python");
+		Book b3 = new Book("Spring Boot", 5000);
+		
+	}
+}
+
+
