@@ -1,1 +1,35 @@
 
+
+class BankAccount
+{
+	int accountNumber;
+	private int accountBalance = 1000;
+	
+	public void setBalance(int accountBalance) {
+		if(accountBalance > 0)
+		{
+			this.accountBalance = accountBalance;
+		}
+		
+	}
+	
+	public void getBalance()
+	{
+		System.out.println(this.accountBalance);
+	}
+}
+
+public class Demo {
+	public static void main(String[] args) {
+
+		BankAccount account = 
+				new BankAccount();
+		
+		account.setBalance(5000);
+		
+		account.getBalance();
+		
+	}
+}
+
+
