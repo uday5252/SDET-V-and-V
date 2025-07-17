@@ -1,0 +1,52 @@
+Inheritance:-
+class GoldLoan {  30 methods }
+class CarLoan { 40 methods }
+class BikeLoan { 60 methods }
+class Loan { 30 methods }
+class GoldLoan extends Loan {  }
+class CarLoan extends Loan { 10 methods }
+.............................................................................
+1) Inheritance can be achieved using extends keyword
+inherited methods ==> It is a method that comes
+from the parent class to the child class.
+
+Specialized methods ==> It is a method that belongs to that particular class only.
+
+Overridden methods ==> It is method that is coming from parent class, but if the child class is not happy with that method body(content) then child has the power to modify that content, after modification, that method is now called as overridden method.
+skin color
+eye color
+smoking habbit
+..........................
+inherited
+2) Only single inheritance is allowed but multiple inheritance is
+not allowed
+3) Constructors do not participate in inheritance.
+In every child class, java checka is there any constructor
+available or not. If present, then inside that constructor
+i.e in the first like java adds super()
+
+when super() is encountered then java auomatically class the parent class constructor
+If there is no constructor created be me, the java created
+a constcrur by itself ==> default constructor
+super keyword calls the parent class from the child class
+4) private members do not participate in inheritance
+final keyword
+=> It can be used in java in 3 different places
+1) On a variable => using final on a variable doesnt allow to modify its value
+2) On a method => using final on a method doesnt allow that method to be overidden
+3) On a class => using final on a class makes that class not to participate in inheriutance.
+Polymorphism
+one thing ==> many forms
+same person ==> different behaviours
+In polymorphism we have 2 types:-
+1) Static(fixed) Polymorphism / Early Binding / Compile time polymorphism
+2) Dynamic Polymophism / Late Binding / Run time polymorphism
+1) Compile time polymorphism is a polymorphism
+which occurs ate compile time, i.e compiler exactly decides which method has to be called and later same method will be told to JVM, and JVM calls it.
+
+Ex: Method Overloading
+2) Method Overiding
+=> It is a process where the child class will modify / override the 
+method coming from the parent.
+Run Time Polymporphism
+The polymorphism that occurs at run time by JVM, i.e JVM decides which class method has to be called at run time.
