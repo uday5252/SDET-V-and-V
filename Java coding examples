@@ -1,0 +1,48 @@
+Rearrange Positive and Negative Numbers in Alternating Fashion
+
+Input:
+[1, -2, 3, -4, 5, -6]
+Output:
+[-2, 1, -4, 3, -6, 5]
+
+public class RearrangeArray {
+
+    public static void rearrange(int[] arr) {
+        int n = arr.length;
+
+        // Step 1: Partition (Move all negative numbers to the beginning)
+        int i = -1;
+        for (int j = 0; j < n; j++) {
+            if (arr[j] < 0) {
+                i++;
+                // Swap arr[i] and arr[j]
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+
+        // At this point, arr[0..i] are negative, arr[i+1..n-1] are positive
+        int neg = 0, pos = i + 1;
+
+        // Step 2: Swap alternate elements
+        while (pos < n && neg < pos && arr[neg] < 0) {
+            // Swap arr[neg] and arr[pos]
+            int temp = arr[neg];
+            arr[neg] = arr[pos];
+            arr[pos] = temp;
+
+            pos++;
+            neg += 2;
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {1, -2, 3, -4, 5, -6};
+        rearrange(arr);
+
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+    }
+}
