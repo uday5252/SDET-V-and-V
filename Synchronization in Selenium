@@ -1,0 +1,53 @@
+package com.abc.demo;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class Login {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		ChromeDriver driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().window().maximize();
+		
+		driver.get("https://www.facebook.com");
+		
+		
+//		WebDriverWait wait = new WebDriverWait(driver,
+//				Duration.ofSeconds(50));
+//		wait.until(ExpectedConditions.visibilityOfElementLocated
+//				(By.id("email"))).sendKeys("raju@gmail.com");
+//		
+		FluentWait<ChromeDriver> fw = new FluentWait<ChromeDriver>(driver);
+		fw.withTimeout(Duration.ofSeconds(50));
+		fw.pollingEvery(Duration.ofSeconds(2));
+		
+		fw.until(anotherDriver -> anotherDriver.
+				findElement(By.id("email"))).sendKeys("Raju");
+		
+//		driver.get("http://127.0.0.1:5500/demo.html");
+//		driver.findElement(By.xpath("//h1[contains(text(),'Welcome')]"));
+		
+//		driver.get("https://www.irctc.co.in/nget/train-search");
+//		
+//		driver.findElement(By
+//				.xpath("(//input[@role='searchbox'])[1]"))
+//		.sendKeys("Bangalore");
+		
+//		driver.findElement(By
+//				.xpath("//span[text()=' BENGALURU CANT - BNC ']"))
+//		.click();
+		
+//		driver.findElement(By
+//				.xpath("//span[contains(text(), 'BENGALURU CANT - BNC')]"))
+//		.click();
+	}
+
+}
