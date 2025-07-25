@@ -1,0 +1,69 @@
+package com.abc.demo;
+
+import java.time.Duration;
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Login {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		ChromeDriver driver = new ChromeDriver();
+		driver.manage().timeouts()
+		.implicitlyWait(Duration.ofSeconds(20));
+		driver.manage().window().maximize();
+		
+		
+		driver.get("http://127.0.0.1:5500/first.html");
+		driver.findElement(By.linkText("Click 1")).click();
+		
+//		String parentAddr = 
+//				driver.getWindowHandle();// parent tab address
+//		
+//		System.out.println(parentAddr);
+		
+		Set<String> allAddr = 
+				driver.getWindowHandles();// parent tab and child tab
+		
+//		allAddr = [ chi, par ]
+		for(String i : allAddr)
+		{
+			driver.switchTo().window(i);
+		}
+		
+		driver.findElement(By.linkText("Click 2")).click();
+		String result = 
+				driver.findElement(By.xpath("//h1[text()='Welcome']"))
+		.getText();
+		
+		System.out.println(result);
+		
+		
+		
+		
+		
+		
+//		driver.get("https://www.amazon.in");
+//		
+//		driver.findElement(
+//				By.xpath("//button[text()='Continue shopping']")).click();
+//		
+//		List<WebElement> result = 
+//				driver.findElements(By.tagName("aaa"));
+//		System.out.println(result.size());
+//		for(WebElement i : result)
+//		{
+//			System.out.println(i.getText());
+//		}
+		
+//		driver.get("http://127.0.0.1:5500/first.html");
+//	
+//		driver.findElement(By.linkText("Click Here"))
+//		.click();
+//		
+//		driver.close();
+		
+	}
+}
