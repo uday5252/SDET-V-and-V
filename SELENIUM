@@ -1,0 +1,133 @@
+Selenium
+1) It is a automation tool use to test
+web applications(browser)
+2) In selenium we have 4 types
+=> Selenium RC(Deprecated) OLDEST
+=> Selenium WebDriver(LATEST ==> THIS)
+=> Selenium GRID(execute the test cases in mutiple
+device)
+=> Selenium IDE(Record and Playback Tool)
+Inbox page should
+get displayed
+Open the browser
+Naviagte to the website
+Enter the valid username
+Enter the valid password
+Click on Login
+Dont require coding skills,
+and want to reduce manual work
+Selenium WebDriver
+Chrome
+Driver
+Software
+
+login page
+
+
+--------------
+--------------
+--------------
+
+
+Selenium WebDriver
+Chrome
+Multiple progg lan
+login page
+
+
+Chrome
+chrome
+driver
+
+
+Selenium
+WebDriver
+Firefox
+gecko
+driver
+
+
+I.E
+
+ie driver
+
+Error message should
+be displayed
+1) Open the Browser
+2) Navigate to Facebook website
+3) Enter a invalid email
+4) Enter a invalid password
+5) Click on Login
+In selenium WebDriver, there is a built in class ==> ChromeDriver ==>
+Launch the chrome browse / open
+ChromeDriver driver =
+    new ChromeDriver();
+Selenium WebDriver is available in the form of  JAR file(contains
+so many built classes, interfaces, methods, ......).
+Anything that we see on the website, in selenium we call it as WebElement
+apart from text.
+Locators
+=> Helps to identify various webelements present in a website.
+1) id locator
+2) name locator
+3) class locator
+4) linktext locator ==> only on the links
+5) partiallink text ==> only on the links
+6) CSS Selector
+We can use css selector in multiple ways.
+1) tag name and id ==> tagname#id
+
+2) tag name and classname ==> tagname.class
+
+3) tag name and attribute ==> id = "email", name = "e,ail"
+tagname[attrname = attrvalue]
+
+4) tagname, attribute and id
+tagname#id[attrname = attrvalue]
+
+5) tagname, attribute and class
+tagname.class[attrname = attrvalue]
+
+6) starts with(^)
+tagname[attrname^ = attrvalue ]
+input[name^ = "email"]
+
+7) starts with($)
+tagname[attrname$ = attrvalue ]
+input[name$ = "email"]
+Xpath
+=> If we are unable to identify a webelement using any of
+the aboe lcoators, then we can identify using XPATH.
+Xpath is a path that is written by looking at the HTML tree structure
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter FirstName:<input type="text">
+    Enter LastName:<input type="text">
+</body>
+</html>
+html
+body
+head
+title
+
+input[1]           input[2]
+FirstName
+LastName
+html/body/input[1]
+/html/body/input[1] ==> Absolute Xpath(from root element(html))
+//input[1] ==> Relative Xpath(from the HTML tag closer to the
+WebElement)
+html
+
+body
+div[1]      div[2]            div[3]
+i[1]
+i[1]
+i[1]   i[2]   i[3]
+//div[1]/input[1]
