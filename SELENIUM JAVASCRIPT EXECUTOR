@@ -1,0 +1,106 @@
+package com.abc.demo;
+
+import java.time.Duration;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Another {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+			
+//		ChromeDriver driver = new ChromeDriver();
+//
+//		driver.manage().timeouts()
+//		.implicitlyWait(Duration.ofSeconds(5));
+//
+//		driver.get("https://www.facebook.com/");
+//		
+//		WebElement ele = driver.findElement(By.id("email"));
+//		ele.sendKeys("Raju123@gmail.com");
+//		
+//		driver.findElement(
+//				By.linkText("Forgotten password?"))
+//		.click();
+//		
+////		NAVIGATIOn
+//		driver.navigate().back();
+//		ele.clear();
+		
+		
+		
+		
+//		ChromeDriver driver = new ChromeDriver();
+//
+//		driver.manage().timeouts()
+//		.implicitlyWait(Duration.ofSeconds(5));
+//
+//		driver.get("http://127.0.0.1:5500/first.html");
+//		
+////		Hidden Element
+//		WebElement ele = driver.findElement(By.id("fname"));
+//		
+//	 	JavascriptExecutor anotherDriver =
+//				(JavascriptExecutor)driver;
+//		
+//		anotherDriver
+//		.executeScript("arguments[0].value='Raju'", ele);
+//		
+//		System.out.println("Done");
+		
+
+		ChromeDriver driver = new ChromeDriver();
+
+		driver.manage().timeouts()
+		.implicitlyWait(Duration.ofSeconds(5));
+
+		driver.get("https://www.booksbykilo.in/new-books");
+		
+		JavascriptExecutor js = 
+				(JavascriptExecutor)driver;
+		
+		boolean isBookFound = false;
+
+		while(!isBookFound) 
+		{
+			String bookName = "Rainbow Bird";
+			List<WebElement> parentDiv = 
+					driver.findElements
+			(By.xpath("//div[@id='productsDiv']//h3"));
+			
+			for(WebElement child : parentDiv)	
+			{
+				if(child.getText().equals(bookName))
+				{
+					System.out.println("Book Found!");
+					isBookFound = true;
+					break;
+				}
+			}
+			js.executeScript
+			("window.scrollBy(0, document.body.scrollHeight)");
+		}
+		if(!isBookFound)
+		{
+			System.out.println("Book Not Found");
+		}
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+		
+	}
+
+
