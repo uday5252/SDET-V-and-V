@@ -1,0 +1,42 @@
+package com.abc.demo.FirstTestNGExample;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.testng.annotations.Test;
+
+public class ExcelUtil {
+	
+	public static String[][] readData() throws IOException
+	{
+		XSSFWorkbook workbook = 
+				new XSSFWorkbook
+				(new FileInputStream("C:\\Users\\udayk\\OneDrive\\Desktop\\logindata.xlsx"));
+		XSSFSheet sheet = 
+				workbook.getSheetAt(0);
+		int rowCount = 
+				sheet.getPhysicalNumberOfRows();
+		int colCount = sheet.getRow(1).getLastCellNum();
+		
+		System.out.println(rowCount);
+		System.out.println(colCount);
+		
+		String info[][] = new String[rowCount - 1][colCount];
+		
+		for(int i = 1; i < rowCount; i++)
+		{
+			XSSFRow row = sheet.getRow(i);
+			for(int j = 0; j < colCount; j++ )
+			{
+//				i = 1, j = 0
+				info[i - 1][j] = row.getCell(j).toString();
+			}
+		}
+		workbook.close();
+		return info;
+	}
+
+}
