@@ -1,0 +1,399 @@
+Fundamentals of Testing
+o Introduction to Software Testing
+o Software Testing - Definitions
+o Need of Software Testing
+o Error-Failure-Defect
+o Causes of Software Defects
+o Cost of Software Defects
+o What does Software Testing reveal?
+o Importance of Software Testing
+o Importance of Testing Early in SDLC Phases
+o Testing and Quality
+
+
+
+o Quality Perception
+o Seven Testing Principles
+o Economics of Testing
+o How Testing is conducted?
+o Software Testing – Then (Past)
+o Software Testing – Now (Present)
+o Scope of Software Testing
+o Factors influencing the Scope of Testing
+o Risk Based Testing
+o Project Risks
+o Product Risks
+o Need of Independent Testing
+o Activities in Fundamental Test Process
+o Attributes of a good Tester
+o Psychology of Testing
+o Code of Ethics for Tester
+o Limitations of Software Testing
+• Testing Throughout the Software Development Lifecycle
+o Software Development Lifecycle Models
+o Software Development and Software Testing
+o Software Development Lifecycle Models in Context
+o Test Levels
+o Component Testing
+o Integration Testing
+o System Testing
+o Acceptance Testing
+o Test Types
+• Functional Testing
+• Non-functional Testing
+o White-box Testing
+o Smoke & Sanity Testing
+o Change-related Testing
+o Test Types and Test Levels
+o Maintenance Testing
+o Triggers for Maintenance
+o Impact Analysis for Maintenance
+o Test Case Terminologies
+o Test Data
+• Static Testing
+o Types of Testing Techniques
+o Differences between Static and Dynamic Testing
+o Static Testing Basics
+o Work Products that Can Be Examined by Static Testing
+o Benefits of Static Testing
+o Review Process
+o Work Product Review Process
+o Roles and responsibilities in a formal review
+o Review Types
+o Applying Review Techniques
+• Test Techniques
+
+
+
+o Categories of Test Techniques
+o Choosing Test Techniques
+o Categories of Test Techniques and Their Characteristics
+o Black-box Test Techniques
+o Equivalence Partitioning
+o Boundary Value Analysis
+o Decision Table Testing
+o State Transition Testing
+o Use Case Testing
+o White-box Test Techniques
+o Statement Testing and Coverage
+o Decision Testing and Coverage
+o The Value of Statement and Decision Testing
+o Experience-based Test Techniques
+o Error Guessing
+o Exploratory Testing
+o Checklist-based Testing
+• Test Management & Test Metrics
+o Test Organization
+o Independent Testing
+o Tasks of a Test Manager and Tester
+o Test Planning and Estimation
+o Purpose and Content of a Test Plan
+o Test Strategy and Test Approach
+o Entry Criteria and Exit Criteria (Definition of Ready and Definition of Done)
+o Test Execution Schedule
+o Factors Influencing the Test Effort
+o Test Estimation Techniques
+o Test Monitoring and Control
+o Metrics Used in Testing
+o Purposes, Contents, and Audiences for Test Reports
+o Configuration Management
+o Risks and Testing
+o Definition of Risk
+o Product and Project Risks
+o Risk-based Testing and Product Quality
+o Defect Management Testing Metrics
+• Requirement Engineering
+o Evolution of Requirements
+o Who provides the Requirements?
+o Challenges in Requirement Gathering
+o Why do we need good requirements?
+o Characteristics & Impact of bad Requirements
+o Requirement Engineering
+o Functional Vs Non-Functional Requirements
+o Non Functional Requirements: FURPS +
+o Stable and Volatile Requirements
+o Baselining Requirements
+o Requirements Traceability
+o Requirement Traceability Matrix
+
+
+o Maintaining Requirement Traceability
+o Requirement Traceability Matrix – Example
+o Requirements Change
+o Change Management Process
+o Requirement Creep
+• Use Case Testing
+o Use case modeling
+o Advantage of use cases
+o Actor
+o Goals and Requirements
+o Goals and scenarios
+o Naming Conventions
+o Alternate Path
+o Exceptions
+o Errors
+o Precondition & Postcondition
+o Good practices
+o Failure scenarios
+• Software Version Guidance
+o Introduction to Software Versioning
+o Major Release
+o Minor Release
+o Revision Release
+o Build Release
+o Beta Version for User Testing
+
+Performance Testing
+Lesson 1: Introduction to Performance Testing
+• Performance Testing – An Overview
+• Which Applications should we Performance test?
+• Performance Problems
+• Objectives of Performance Testing
+• When To Do Performance Testing
+• Performance Testing Process/Phases
+• Performance Testing Metrics
+• Examples of Performance Test Cases
+Lesson 2: Types of Performance Testing
+• Load Testing – Need, Scenarios, Examples
+• Stress Testing – Need, Scenarios, Examples
+• Endurance(Soak) Testing – Need, Scenarios, Examples
+• Spike Testing – Need, Scenarios, Examples
+• Volume Testing– Need, Scenarios, Examples
+• Scalability Testing– Need, Scenarios, Examples
+Lesson 3: Introduction to JMETER
+• Introduction to JMeter
+
+
+
+o Introduction to JMeter
+o Automation Testing using JMeter
+o The Features of JMeter
+o The GUI
+• Getting Started
+o The Requirements
+o Installing JMeter
+o Running JMeter
+• Anatomy of a JMeter test
+o Workbench
+o Test Plan
+o Thread Groups
+o Controllers
+o Samplers
+o Logic controllers
+o Test fragments
+o Listeners
+o Timers
+o Assertions
+Security Testing
+Lesson 1: Introduction to Security Testing
+• Security Testing
+• Characteristics of a Secure software
+• Software Security Levels
+• Why Security Defects Occur?
+• Why Security Testing ?
+• Security Testing Techniques.
+Lesson 2: Mobile Security
+• Android OS Security
+• Mobile app Permissions
+• Signed apps
+• Problems with Android – Examples
+• Methods of Security
+o Security through Obscurity
+o Principle of Least Leverage
+o Sanitizing inputs
+o Security Audit
+o Data Classification
+o Data Storage Location
+o Encryption
+Lesson 3: Mobile + Web Security
+
+
+
+• OWASP Top 10 Vulnerabilities
+• Cross Site Scripting (XSS)
+• SQL Injection Flaws
+• Broken Authentication and Session Management
+• Failure to Restrict URL Access
+• Cross Site Request Forgery(CSRF)
+• Un validated Redirects and Forwards
+• Insecure Direct Object References
+• Security Misconfiguration
+• Insecure Cryptographic Storage
+• Insecure Communications
+• Denial of Service
+• Packet sniffing
+• Thinking like Attacker to find Vulnerabilities
+o View source
+o Form Validation
+o Bypassing client-side input restrictions and validation
+TDM & TEM
+Lesson 1: Test Data Management
+• What is Test Data?
+• Test Data Challenges
+• Need for TDM and Best Practices
+• Essential Steps for a streamlined TDM
+o Case study Example
+• TDM Strategies
+• Advantages of TDM
+• Corrupted Test Data
+• Preparing Ideal Test Data to ensure Maximum Test Coverage
+o Case study Example
+• TDM Tools
+Lesson 2: Test Environment Management
+• Introduction
+• Problems faced due to poor TEM
+• TEM’s Techniques
+• Why is TEM from Capgemini and Sogeti different
+• TEM’s end-to-end Service
+• Benefits of TEM
+o Two Casestudy Examples
+
+Introduction to Agile
+
+
+
+Program Duration: 0.5 Day
+Contents:
+• Agile Process Framework
+o History of Traditional Software Development Model
+o Software Development Model and SDLC
+o “Waterfall Model” – An Overview
+o Waterfall or Sequential Based Development Model
+o “Real Life” – Waterfall Model
+o “Waterfall Model” – Advantages
+o “Waterfall Model” – Disadvantages
+o Agile Software Development – Definition
+o Agile Development Model
+o Graphical Illustration of Agile Development Model
+o Why use Agile?
+o Agile Manifesto and Principles
+o 12 Principles of Agile Methods
+o Agile Values
+o What is NOT an Agile software development?
+o Foundation of an Agile software development Method
+o Common Characteristics of Agile Methods
+o Agile Methods and Practices
+o When to use Agile Model?
+o Advantages of Agile Model
+o Disadvantages of Agile Model
+o Difference between Agile and Waterfall Model
+o Agile – Myths and Reality
+o Agile Market Insight
+• Agile Methods and Practices - SCRUM
+o Introduction to SCRUM
+o Scrum Roles and Responsibilities
+o Scrum Core Practices and Artifacts
+• User Story
+• Sprint
+• Release Planning Meeting
+• Sprint Planning Meeting
+• Daily Scrum Meeting (Daily Stand up)
+• Sprint Review Meeting
+• Retrospective
+• Product Backlog
+• Sprint Backlog
+• Burn-Down Chart
+• Velocity
+• Impediment Backlog
+o Definition of “Done”
+o Splitting User Story into Task
+o Why to Split User Story into Task?
+o Guidelines for Breaking Down a User Story into Tasks
+o Examples of Scrum Task Board
+
+
+
+o Planning Poker®
+o Planning Poker® - Process/Steps
+o What are Story Points?
+o How do We Estimate in Story Points?
+o What Goes into Story Points?
+• Agile Methods and Practices - Extreme Programming (XP), Lean Software Development
+& Kanban
+o Introduction to Extreme Programming
+o The Rules of Extreme Programming
+o Extreme Programming (XP) - Principles
+o Extreme Programming (XP) – Key Terms
+o Introduction to Lean Software Development
+o Principles of Lean Software Development
+o What is Kanban?
+• Introduction to Agile Testing
+o What is Agile Testing?
+o Agile Team - Roles and Activities
+o Where does Tester fit in Agile Team?
+o Agile Team – Tester’s Role and Responsibilities
+o Agile Team – Test Manager’s Role and Responsibilities
+o How is Agile Testing different?
+o Traditional Testing Vs. Agile Testing
+o What is Iteration 0?
+o User Story Perspective Agile Testing Process
+o Tester’s Change in Mind-Set – A key to success
+• Agile Testing Quadrants and Agile Test Planning
+o An overview of Agile Testing Quadrants
+o Agile Testing Quadrant 1, 2 & 3 Goals
+o Agile Testing Quadrant 1, 2 & 3 Toolkit
+o Test Planning in Agile Testing
+
+Defect Reporting and JIRA
+
+Program Duration: 1 Day
+Contents:
+• Defect Free Defect Reporting
+o What is Software Quality?
+o Defect Definition
+o Why find Defects?
+o Impact of Defects
+o Legal Implications
+o Life-cycle workflow
+o Life-cycle workflow - Enhancement
+o Defect Report - Definition
+o Defect Reporting – The Need
+o Defect Report - Template
+o Important Attributes
+o Example on Severity & Priority
+
+
+
+o Defect Report Users
+o Defect Management
+o Logging, Tracking & Analysis
+o What is Defective Defect Report?
+o The reasons for defective reports
+o Other Influencing Factors
+o The Most Severe Defect
+o Importance of Effective Defect Reporting
+• Overview of Defect Tracking Tools
+o Introduction to Defect Tracking Tool
+o Introduction to Bugzilla
+o Features of Bugzilla
+o Bugzilla – User Interface
+o Introduction to JIRA
+o Introduction to HP ALM
+o Features of HP ALM
+o HP ALM – User Interface
+• Introduction to JIRA
+o Overview of JIRA
+o Features of JIRA
+o JIRA Users
+o JIRA Software Workflow
+o Basic Concepts of JIRA
+o Issue, Project, Workflow, Components & Versions
+o JIRA Software
+o Overview on Issues
+o Priority of Issues
+o Issue Workflow
+o Overview of Projects
+o Sub tasks
+• Hands-on JIRA
+o Login to JIRA
+o Create a SCRUM Project,
+o Inviting team members,
+o Creating components
+o Creating Issues – Epics, Stories, Tasks, Bugs
+o Creating sub-tasks
+o Managing Issues, issue properties.
+o Importing Issues from csv file into JIRA
+o Configuring ZEPHYR for Test Case Management
+o Create Sprints in JIRA & Issue Workflow
+o JIRA Reports – Epic report, Created vs Resolved Issues Report, Sprint
+report, Burn down chart, Velocity chart.
