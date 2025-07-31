@@ -1,0 +1,131 @@
+package com.abc.demo.CrossBrowser;
+
+
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class Login {
+
+    WebDriver driver;
+
+    @BeforeSuite
+    public void beforeSuite() {
+        System.out.println("BeforeSuite: Start report");
+    }
+
+    @BeforeTest
+    public void beforeTest() {
+        System.out.println("BeforeTest: Launching Chrome browser");
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+    }
+
+    @BeforeClass
+    public void beforeClass() {
+        System.out.println("BeforeClass: Navigate to Facebook home page once");
+        driver.get("https://www.facebook.com/");
+    }
+
+    @BeforeMethod
+    public void beforeMethod() {
+        System.out.println("BeforeMethod: Clear login fields before every test");
+
+            WebElement email =
+            		driver.findElement(By.id("email"));
+            WebElement pass = 
+            		driver.findElement(By.id("pass"));
+            email.clear();
+            pass.clear();
+    }
+
+    @Test
+    public void loginWithValidCredentials() {
+        System.out.println("Test 1: Login with VALID credentials");
+        driver.findElement(By.id("email")).sendKeys("valid_email@example.com"); // 🔁 use test email
+        driver.findElement(By.id("pass")).sendKeys("valid_password");           // 🔁 use test password
+        driver.findElement(By.name("login")).click();
+    }
+
+    @Test
+    public void loginWithInvalidCredentials() {
+        System.out.println("Test 2: Login with INVALID credentials");
+        driver.findElement(By.id("email")).sendKeys("invalid_email@example.com");
+        driver.findElement(By.id("pass")).sendKeys("wrong_password");
+        driver.findElement(By.name("login")).click();
+    }
+    
+
+    @AfterMethod
+    public void afterMethod(ITestResult result) {
+        System.out.println("AfterMethod: Check test result");
+
+        if (result.getStatus() == ITestResult.FAILURE) {
+            System.out.println("Test Failed. Capturing screenshot...");
+            TakesScreenshot ts = (TakesScreenshot) driver;
+            File src = ts.getScreenshotAs(OutputType.FILE);
+            String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+            String fileName = "screenshot_" + result.getName() + "_" + timeStamp + ".png";
+
+            try {
+                FileUtils.copyFile(src, new File("./screenshots/" + fileName));
+                System.out.println("Screenshot saved: " + fileName);
+            } catch (IOException e) {
+                System.out.println("Failed to save screenshot: " + e.getMessage());
+            }
+        }
+    }
+
+    @AfterClass
+    public void afterClass() {
+        System.out.println("AfterClass: Deleting cookies");
+        driver.manage().deleteAllCookies();
+    }
+
+    @AfterTest
+    public void afterTest() {
+        System.out.println("AfterTest: Closing browser");
+        if (driver != null) {
+            driver.quit();
+        }
+    }
+
+    @AfterSuite
+    public void afterSuite() {
+//    	flush()
+        System.out.println("AfterSuite: End of test suite. Finalize report.");
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
