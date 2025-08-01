@@ -1,0 +1,34 @@
+// Check if status code is 200
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+// Check if response is JSON
+pm.test("Response is JSON", function () {
+    pm.response.to.be.json;
+});
+
+// Parse JSON
+let response = pm.response.json();
+
+// Check if 'name' is 'Cook'
+pm.test("Name is Cook", function () {
+    pm.expect(response.name).to.eql("Cook");
+});
+
+// Check if year is 2018
+pm.test("Year is 2018", function () {
+    pm.expect(response.data.year).to.eql(2018);
+});
+
+
+
+// Check if CPU model contains 'Intel'
+pm.test("CPU model contains Intel", function () {
+    pm.expect(response.data["CPU model"]).to.include("Intel");
+});
+
+// Check if Hard disk size is 2 TB
+pm.test("Hard disk size is 2 TB", function () {
+    pm.expect(response.data["Hard disk size"]).to.eql("2 TB");
+});
