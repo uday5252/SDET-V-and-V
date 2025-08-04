@@ -397,3 +397,226 @@ o Configuring ZEPHYR for Test Case Management
 o Create Sprints in JIRA & Issue Workflow
 o JIRA Reports – Epic report, Created vs Resolved Issues Report, Sprint
 report, Burn down chart, Velocity chart.
+
+=======================================================================
+=======================================================================
+=======================================================================
+=======================================================================
+
+Introduction to Automation 
+o What is Test Automation? 
+o Why to Automate? 
+o Manual Testing Vs Automation Testing 
+o Manual to Automated Testing – The Process 
+o Advantage of Automation Testing 
+o What Should be automated and what should not be automated? 
+o Automation Testing – Best Practices 
+o Common Misconceptions About Automated Testing 
+o Example of Test Automation 
+• Introduction to Selenium 
+o Introduction to Selenium 
+o Selenium: What it is? 
+o Landscape and Usage 
+o Overview of Selenium Core 
+o Overview Selenium Remote Control  
+o Overview of Selenium IDE 
+o Overview of Selenium Web Driver  
+o Overview of Selenium Grid 
+o Why Selenium? 
+• Selenium WebDriver 
+o Introduction to WebDriver 
+o Selenium 4.0 Introduction 
+o Web Driver Vs Selenium RC Vs Selenium IDE 
+o Benefits of Web Driver over Selenium IDE and RC 
+o Limitations of Web Driver 
+• Testing Web Applications Using Web Driver API 
+o Basic Setup for Automation Script 
+• Introduction to Maven Project, dependencies 
+• Packages – Pages, Tests 
+• src/main/java, src/main/resources 
+• src/test/java, src/test/resources 
+• test-output - Reports 
+o Writing First WebDriver Test 
+o Locating UI Elements-Developers Tools 
+o Locators in Selenium 
+o Introduction to WebElement Interface 
+o WebDriver API Methods - findElement() and findElements() 
+o Locating UI Elements using By Strategy 
+o Difference between findElement() and findElements() 
+o Locating Elements by CSS Selectors 
+o Locating Element by DOM 
+o Locating Elements by XPath 
+• Introduction to XPath 
+• Types of XPath (Absolute & Relative)
+
+• Methods of XPath (Parent, Child, Ancestor, Self, Descendant, contains(),  
+starts-with(), ends-with(), text(), preceding, AND & OR expression, sibling 
+expression) 
+o Selenium 4.0 Relative Locator 
+• above 
+• below 
+• toLeftOf 
+• toRightOf 
+• near 
+o Navigation API 
+o Interrogation API 
+o WebElement API 
+o Interacting with Form Elements Using WebDriver API 
+o Interacting with Dropdown-box Using WebDriver API 
+o Handling Popup Dialogs and Alerts – accept(), dismiss(), getText() 
+o Handling Multiple Windows in Selenium WebDriver 
+o getWindowHandle() and getWindowHandles() – Example 
+o Multiple Windows & Tabs Handling 
+o Handling Synchronization in Selenium WebDriver 
+o Types of Synchronization in Selenium WebDriver – Implicit wait, Explicit wait, 
+Fluent wait, setSpeed(), sleep(), Duration.ofSeconds(). 
+o Exceptions in Selenium WebDriver – NoSuchElement,NoAlertPresent, 
+ElementNotVisible,StaleElementReference 
+o Execute JavaScript Based Code in Selenium WebDriver 
+o JavaScript Executor – Scenarios 
+• Web Driver Test with TestNG 
+o Introduction to TesTNG 
+o TestNG Annotations 
+o Assertions/Verifications with TestNG 
+o Web Driver Test cases with TestNG 
+o Generating TestNG report
+ Test Suite 
+
+==================================================================================
+==================================================================================
+==================================================================================
+==================================================================================
+==================================================================================
+
+
+Introduction to API Testing 
+o What is API 
+o What is API Testing 
+o Why do we need to perform API testing? 
+o The Benefits of API Testing 
+o API testing types 
+o API testing best practices 
+o Types of Bugs that API testing detects 
+o Challenges in API testing 
+o API testing tools Selection Criteria 
+ API Testing Tools 
+• Postman Basics  
+o Introduction to Postman 
+o Why Use Postman? 
+o Download and Install Postman 
+o How to use Postman  
+o Create new Request in Postman 
+o Get Request in Postman 
+o How to deal with Response in Postman 
+o POST Request using Postman 
+• Introduction to REST Assured  
+o What is REST Assured 
+o WHAT A REST ASSURED GIVES 
+o REST Assured Setup 
+o Getting started with REST Assured – Adding Dependencies 
+o Writing Test 
+o HTTP GET Request Example 
+o Get Request, Response Validation 
+o POST Request, Response Validation 
+o Demo
+
+==================================================================================
+==================================================================================
+==================================================================================
+==================================================================================
+==================================================================================
+
+Introduction to Java 
+o Introduction to Java                 
+o Features of Java        
+o Evolution in Java 
+o Developing software in Java 
+• Eclipse 4.4 (Luna) as an IDE 
+o Installation and Setting up Eclipse 
+o Introduction to Eclipse IDE  
+o Creating and Managing Java Projects 
+o Miscellaneous Options 
+• Language Fundamentals 
+o Keywords  
+o Primitive Data Types 
+o Operators and Assignments  
+o Variables and Literals  
+o Flow Control: Java’s Control Statements 
+o Best Practices 
+• Classes and Objects 
+o Classes and Objects 
+o Packages 
+o Access Specifiers  
+o Constructors - Default and Parameterized 
+o this reference  
+o using static keyword 
+o Best Practices 
+• Exploring Basic Java Class Libraries 
+o The Object Class  
+o Wrapper Classes  
+o Type casting  
+o Using Scanner Class                                
+o String Handling  
+o Date and Time API  
+o Best Practices 
+• Inheritance and Polymorphism 
+o Inheritance 
+o Using super keyword 
+o InstanceOf Operator 
+o Method & Constructor overloading 
+o Method overriding 
+o @override annotation 
+o Using final keyword 
+o Best Practices 
+• Abstract Classes and Interfaces   
+o Abstract class 
+o Interfaces 
+o default methods  
+o static methods on Interface  
+o Runtime Polymorphism 
+o Best Practices 
+• Regular Expressions  
+o Regular Expressions 
+o Validating data  
+o Best Practices 
+• Exception Handling 
+o Introduction 
+o Exception Types 
+o Exception Hierarchy 
+o Try-catch-finally 
+o Try-with-resources 
+o Multi catch blocks 
+o Throwing exceptions using throw 
+o Declaring exceptions using throws  
+o User defined Exceptions 
+o Best Practices
+• Array  
+o One dimensional array 
+o Multidimensional array 
+o Using varargs 
+o Using Arrays class 
+o Best Practices 
+• Collection 
+o Collections Framework         
+o Collection Interfaces 
+o Implementing Classes  
+o Iterating Collections  
+o Best Practices  
+• File IO   
+o Overview of I/O Streams                                     
+o Types of Streams 
+o The Byte-stream  I/O hierarchy                                        
+o Character Stream Hierarchy                              
+o Buffered Stream 
+o The File class 
+o The Path class  
+o Object Stream 
+o Best Practices 
+• Introduction to Junit 4 /Test NG 
+o Introduction 
+o JUnit 
+o Installing and Running JUnit   
+o Testing with JUnit  
+o Testing Exceptions 
+o Test Fixtures  
+o Best Practices
