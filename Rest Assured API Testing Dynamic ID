@@ -1,0 +1,57 @@
+
+baseURI=https://example.com/api
+getUserEndpoint=/users/{id}
+createUserEndpoint=/users
+updateUserEndpoint=/users/{id}
+deleteUserEndpoint=/users/{id}
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+public class ConfigReader {
+
+    private static Properties properties;
+
+    public static void loadProperties() {
+        properties = new Properties();
+        try {
+            FileInputStream fis = new FileInputStream("src/test/resources/config.properties");
+            properties.load(fis);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static String getProperty(String key) {
+        if (properties == null) {
+            loadProperties();
+        }
+        return properties.getProperty(key);
+    }
+}
+
+
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+
+public class ApiTest {
+    public static void main(String[] args) {
+        // Load properties
+        ConfigReader.loadProperties();
+
+        // Set base URI
+        RestAssured.baseURI = ConfigReader.getProperty("baseURI");
+
+        // Example: GET user with ID 1
+        String endpoint = ConfigReader.getProperty("getUserEndpoint").replace("{id}", "1");
+
+        Response response = RestAssured
+                .given()
+                .when()
+                .get(endpoint);
+
+        System.out.println(response.getStatusCode());
+        System.out.println(response.prettyPrint());
+    }
+}
